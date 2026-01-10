@@ -56,7 +56,7 @@ To enable rounded rectangles without changing any colors, use one of the followi
 - Pass the command line argument `-DROUNDED_STYLE=1` to PlantUML
 
 > [!WARNING]
-> Place the `!ROUNDED_STYLE=1` statement BEFORE all C4_ !include statements.
+> Place the `!ROUNDED_STYLE=1` statement BEFORE all C4_ `!include` statements.
 
 ```plantuml
 @startuml
@@ -84,13 +84,15 @@ SHOW_LEGEND()
 
 ### Update basic themes with a new, modernized style (`!NEW_C4_STYLE=1`)
 
-In July 2025, [c4model.com](https://c4model.com/) used a new visual style for C4 diagrams. The basic themes (C4_blue [default], C4_brown, C4_green and C4_violet) can now use this updated wireframe styling (internally it swaps background and text colors and uses rounded rectangles).  
+In July 2025, [c4model.com](https://c4model.com/) used a new visual style for C4 diagrams. The basic themes (C4_blue [default], C4_brown, C4_green and C4_violet) can now use this updated wireframe styling (internally it swaps background and text colors and uses rounded rectangles).
+
 This new style should work with most existing tag definitions (tag colors are automatically swapped), but in some cases, tag definitions may need manual updates.
 
 > [!WARNING]
 > **This feature is only intended and tested for diagrams using the basic themes** (C4_blue [default], C4_brown, C4_green, and C4_violet). Other themes may have unintended side effects if background and font colors are swapped (`!ROUNDED_STYLE=1` could be a good alternative).  
 >
-> Another side effect is the **changed meaning of the color arguments**: when the new style is enabled, `$bgColor` sets the font color and `$fontColor` sets the background color. This allows automatic migration of existing diagrams.  
+> Another side effect is the **changed meaning of the color arguments**: when the new style is enabled, `$bgColor` sets the font color and `$fontColor` sets the background color. This allows automatic migration of existing diagrams.
+>
 > If you are creating new diagrams, use one of the newly added themes (C4_blue_new, C4_brown_new, C4_green_new, or C4_violet_new). These provide a similar wireframe look with rounded rectangles, but do not swap the colors.
 
 To enable the new style, use one of the following methods:
@@ -99,7 +101,7 @@ To enable the new style, use one of the following methods:
 - Pass the command line argument `-DNEW_C4_STYLE=1` to PlantUML
 
 > [!WARNING]
-> Place the `!NEW_C4_STYLE=1` statement BEFORE all C4_ !include statements.
+> Place the `!NEW_C4_STYLE=1` statement BEFORE all C4_ `!include` statements.
 
 ```plantuml
 @startuml
